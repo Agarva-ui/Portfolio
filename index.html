@@ -59,11 +59,11 @@
         <!-- Hero Section -->
         <section id="home" class="min-h-screen flex items-center justify-center pt-20">
             <div class="text-center px-4" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-                <img class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-gray-700 shadow-xl mx-auto mb-6"
-                    src="https://placehold.co/200x200/4A5568/FFFFFF?text=Anwar" 
+                <img class="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-gray-700 shadow-xl mx-auto mb-6 "
+                    src="{{url_for('static',filename='images/Me.jpg')}}" 
                     alt="Anwar's Photo" />
                 <h1 class="text-4xl md:text-5xl font-bold text-white">Hi, I'm Anwar</h1>
-                <p class="mt-2 text-lg text-gray-300">A passionate developer building web applications.</p>
+                <p class="mt-2 text-lg text-gray-300">A passionate developer building all types of applications.</p>
             </div>
         </section>
 
@@ -74,11 +74,9 @@
                     <div class="lg:w-1/2 text-center lg:text-left" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="200">
                         <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
                         <p class="text-lg text-gray-300 leading-relaxed">
-                            I'm a software developer with a passion for creating clean, efficient, and user-friendly digital experiences. I enjoy tackling complex problems and learning new technologies to bring my ideas to life. My goal is to work on meaningful projects that have a positive impact.
-                        </p>
-                        <p class="text-lg text-gray-300 leading-relaxed mt-4">
-                           When I'm not coding, I enjoy [Your Hobby 1], [Your Hobby 2], and exploring the latest advancements in the tech world.
-                        </p>
+                            Hey, I’m Anwar — a Computer Science student who enjoys turning ideas into real, working systems. I’ve explored a variety of tools and languages, but Python is where I feel most at home — especially when it comes to automation, data analysis, and building smart solutions that save time and effort.
+
+Lately, I’ve been diving deeper into machine learning, learning how data and algorithms shape the decisions behind modern tech.</p>
                     </div>
                      <div class="lg:w-1/2">
                         <div class="p-4 bg-gray-800 rounded-lg shadow-2xl" data-aos="fade-down">
@@ -93,50 +91,62 @@
         <section id="projects" class="py-20 lg:py-24">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-white text-center mb-12">My Projects</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="project_parent_div">
 
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="fade-in-right" data-aos-delay="200">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Project One</h3>
-                        <p class="text-sm text-gray-400 mb-4">A quick description of this cool project. Explain the tech stack and what it does.</p>
-                        <a href="#" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Text to morse code</h3>
+                        <p class="text-sm text-gray-400 mb-4">A handy tool that converts plain text to Morse code — and back again — instantly.</p>
+                        <a href="{{url_for('text_to_morsecode')}}" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
                     </div>
 
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="fade-in-right" data-aos-delay="400">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Project Two</h3>
-                        <p class="text-sm text-gray-400 mb-4">Another awesome thing I built. Focus on the problem it solves.</p>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Pdf To Audio Book</h3>
+                        <p class="text-sm text-gray-400 mb-4">Upload a PDF and turn it into spoken audio. Perfect for studying or hands-free reading.</p>
                         <a href="#" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
                     </div>
                     <div class="bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="fade-in-right" data-aos-delay="600">
-                        <h3 class="text-xl font-semibold mb-2 text-white">Project Three</h3>
-                        <p class="text-sm text-gray-400 mb-4">This project showcases my skills in [specific skill, e.g., API integration].</p>
-                        <a href="#" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
+                        <h3 class="text-xl font-semibold mb-2 text-white">color palete generator</h3>
+                        <p class="text-sm text-gray-400 mb-4">Extracts the most dominant colors from any image and builds a clean, ready-to-use palette.</p>
+                        <a href="https://github.com/Agarva-ui/Image_color_palete_generator" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
                     </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="fade-in-right" data-aos-delay="600">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Tic Tac Toe</h3>
+                        <p class="text-sm text-gray-400 mb-4">Play classic Tic Tac Toe against another player — or challenge a smart AI powered by the Minimax algorithm.</p>
+                        <a href="https://github.com/Agarva-ui/Tic-Tac-Toe" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-lg shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="fade-in-right" data-aos-delay="600">
+                        <h3 class="text-xl font-semibold mb-2 text-white">Space Race analysis</h3>
+                        <p class="text-sm text-gray-400 mb-4">Builds a logistic regression model using a real-world space launch dataset to predict whether a mission succeeds or fails, and analyzes which factors—such as company, rocket type, and launch location—have the strongest impact on the outcome.</p>
+                        <a href="https://github.com/Agarva-ui/Tic-Tac-Toe" target="_blank" class="inline-block text-blue-400 hover:text-blue-300">View Project →</a>
+                    </div>c
+                </div>
+                    
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Contact Footer -->
-    <footer id="contact" class="bg-gray-900/80 py-12">
+ <footer id="contact" class="bg-gray-900/80 py-12">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-2xl font-bold text-white mb-4">Get In Touch</h2>
             <p class="text-gray-400 mb-6">Feel free to reach out for collaborations or just a friendly chat!</p>
-            <a href="mailto:your.email@example.com" class="text-lg text-blue-400 hover:underline">your.email@example.com</a>
+            <a href="mailto:anwar.badiea@gmail.com" class="text-lg text-blue-400 hover:underline">anwar.badiea@gmail.com</a>
             <div class="flex justify-center gap-6 mt-8">
                 <!-- GitHub Icon -->
-                <a href="https://github.com/your-username" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="https://github.com/Agarva-ui" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.852 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
                 </a>
                 <!-- LinkedIn Icon -->
-                <a href="https://linkedin.com/in/your-username" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <a href="https://www.linkedin.com/in/anwar-alshaibani-21b91733a/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
-               
             </div>
         </div>
     </footer>
-
-    <script>
+ <script>
 
         document.addEventListener('DOMContentLoaded', () => {
             const mobileMenuButton = document.getElementById('mobile-menu-button');
